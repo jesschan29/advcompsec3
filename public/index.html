@@ -585,387 +585,387 @@
     </div>
 </div>
 <script>
-    const contractAddress = '0x12831E21A018943253f8074dE57a548cb1d59532'; // Replace with actual contract address
-    const abi = [
+    const contractAddress = '0xe3109d9234Be66E6a3968c9B60f168760b70F31C'; // Replace with actual contract address
+    const abi =
+    [
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "description",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
         }
-        ],
-        "name": "MedicalRecordAdded",
-        "type": "event"
+      ],
+      "name": "MedicalRecordAdded",
+      "type": "event"
     },
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "description",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
         }
-        ],
-        "name": "MedicalRecordDeleted",
-        "type": "event"
+      ],
+      "name": "MedicalRecordDeleted",
+      "type": "event"
     },
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "description",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "description",
+          "type": "string"
         }
-        ],
-        "name": "MedicalRecordEdited",
-        "type": "event"
+      ],
+      "name": "MedicalRecordEdited",
+      "type": "event"
     },
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": true,
-            "internalType": "address",
-            "name": "user",
-            "type": "address"
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
         },
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "reason",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "reason",
+          "type": "string"
         }
-        ],
-        "name": "RegistrationFailed",
-        "type": "event"
+      ],
+      "name": "RegistrationFailed",
+      "type": "event"
     },
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": true,
-            "internalType": "address",
-            "name": "user",
-            "type": "address"
+          "indexed": true,
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
         },
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
         }
-        ],
-        "name": "UserRegistered",
-        "type": "event"
+      ],
+      "name": "UserRegistered",
+      "type": "event"
     },
     {
-        "anonymous": false,
-        "inputs": [
+      "anonymous": false,
+      "inputs": [
         {
-            "indexed": false,
-            "internalType": "string",
-            "name": "reason",
-            "type": "string"
+          "indexed": false,
+          "internalType": "string",
+          "name": "reason",
+          "type": "string"
         }
-        ],
-        "name": "accessError",
-        "type": "event"
+      ],
+      "name": "accessError",
+      "type": "event"
     },
     {
-        "inputs": [],
-        "name": "administrator",
-        "outputs": [
+      "inputs": [],
+      "name": "administrator",
+      "outputs": [
         {
-            "internalType": "address",
-            "name": "",
-            "type": "address"
+          "internalType": "address",
+          "name": "",
+          "type": "address"
         }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
-        "inputs": [
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "_name",
-            "type": "string"
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_email",
-            "type": "string"
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_password",
-            "type": "string"
+          "internalType": "string",
+          "name": "_password",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_role",
-            "type": "string"
+          "internalType": "string",
+          "name": "_role",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_gender",
-            "type": "string"
+          "internalType": "string",
+          "name": "_gender",
+          "type": "string"
         },
         {
-            "internalType": "uint256",
-            "name": "_age",
-            "type": "uint256"
+          "internalType": "uint256",
+          "name": "_age",
+          "type": "uint256"
         },
         {
-            "internalType": "string",
-            "name": "_secret",
-            "type": "string"
+          "internalType": "string",
+          "name": "_secret",
+          "type": "string"
         }
-        ],
-        "name": "register",
-        "outputs": [
+      ],
+      "name": "register",
+      "outputs": [
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
-        "inputs": [],
-        "name": "login",
-        "outputs": [
+      "inputs": [],
+      "name": "login",
+      "outputs": [
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
-        "inputs": [],
-        "name": "getProfile",
-        "outputs": [
+      "inputs": [],
+      "name": "getProfile",
+      "outputs": [
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         },
         {
-            "internalType": "uint256",
-            "name": "",
-            "type": "uint256"
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
-        "inputs": [],
-        "name": "getSelfMedicalRecords",
-        "outputs": [
+      "inputs": [],
+      "name": "getSelfMedicalRecords",
+      "outputs": [
         {
-            "components": [
+          "components": [
             {
-                "internalType": "uint256",
-                "name": "recordId",
-                "type": "uint256"
+              "internalType": "uint256",
+              "name": "recordId",
+              "type": "uint256"
             },
             {
-                "internalType": "string",
-                "name": "description",
-                "type": "string"
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "date",
-                "type": "string"
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "doctor",
-                "type": "string"
+              "internalType": "string",
+              "name": "doctor",
+              "type": "string"
             }
-            ],
-            "internalType": "struct HealthcareAccessControl.MedicalRecord[]",
-            "name": "",
-            "type": "tuple[]"
+          ],
+          "internalType": "struct HealthcareAccessControl.MedicalRecord[]",
+          "name": "",
+          "type": "tuple[]"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
     },
     {
-        "inputs": [
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "_email",
-            "type": "string"
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
         }
-        ],
-        "name": "getMedicalRecords",
-        "outputs": [
+      ],
+      "name": "getMedicalRecords",
+      "outputs": [
         {
-            "components": [
+          "components": [
             {
-                "internalType": "uint256",
-                "name": "recordId",
-                "type": "uint256"
+              "internalType": "uint256",
+              "name": "recordId",
+              "type": "uint256"
             },
             {
-                "internalType": "string",
-                "name": "description",
-                "type": "string"
+              "internalType": "string",
+              "name": "description",
+              "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "date",
-                "type": "string"
+              "internalType": "string",
+              "name": "date",
+              "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "doctor",
-                "type": "string"
+              "internalType": "string",
+              "name": "doctor",
+              "type": "string"
             }
-            ],
-            "internalType": "struct HealthcareAccessControl.MedicalRecord[]",
-            "name": "",
-            "type": "tuple[]"
+          ],
+          "internalType": "struct HealthcareAccessControl.MedicalRecord[]",
+          "name": "",
+          "type": "tuple[]"
         },
         {
-            "internalType": "string",
-            "name": "",
-            "type": "string"
+          "internalType": "string",
+          "name": "",
+          "type": "string"
         }
-        ],
-        "stateMutability": "nonpayable",
-        "type": "function"
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
-        "inputs": [
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "_email",
-            "type": "string"
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_description",
-            "type": "string"
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_date",
-            "type": "string"
+          "internalType": "string",
+          "name": "_date",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_doctor",
-            "type": "string"
+          "internalType": "string",
+          "name": "_doctor",
+          "type": "string"
         }
-        ],
-        "name": "addMedicalRecord",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+      ],
+      "name": "addMedicalRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
-        "inputs": [
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "_email",
-            "type": "string"
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
         },
         {
-            "internalType": "uint256",
-            "name": "_recordId",
-            "type": "uint256"
+          "internalType": "uint256",
+          "name": "_recordId",
+          "type": "uint256"
         },
         {
-            "internalType": "string",
-            "name": "_description",
-            "type": "string"
+          "internalType": "string",
+          "name": "_description",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_date",
-            "type": "string"
+          "internalType": "string",
+          "name": "_date",
+          "type": "string"
         },
         {
-            "internalType": "string",
-            "name": "_doctor",
-            "type": "string"
+          "internalType": "string",
+          "name": "_doctor",
+          "type": "string"
         }
-        ],
-        "name": "editMedicalRecord",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+      ],
+      "name": "editMedicalRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     },
     {
-        "inputs": [
+      "inputs": [
         {
-            "internalType": "string",
-            "name": "_email",
-            "type": "string"
+          "internalType": "string",
+          "name": "_email",
+          "type": "string"
         },
         {
-            "internalType": "uint256",
-            "name": "recordId",
-            "type": "uint256"
+          "internalType": "uint256",
+          "name": "recordId",
+          "type": "uint256"
         }
-        ],
-        "name": "deleteMedicalRecord",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function"
+      ],
+      "name": "deleteMedicalRecord",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
     }
-    ];
-
+  ]
     // let currentUser = null;
 
     function openChoicePopup() {
